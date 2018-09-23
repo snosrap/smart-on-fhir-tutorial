@@ -56,11 +56,11 @@
           // Observations
           lymph = byCodes('26478-8');
           // Cerner SoF Tutorial Observations
-          // var height = byCodes('8302-2');
-          // var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
-          // var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
-          // var hdl = byCodes('2085-9');
-          // var ldl = byCodes('2089-1');
+          var height = byCodes('8302-2');
+          var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
+          var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
+          var hdl = byCodes('2085-9');
+          var ldl = byCodes('2089-1');
 
 
           var p = defaultPatient();
@@ -74,18 +74,18 @@
 
 
           // Cerner SoF Tutorial Observations
-          // p.height = getQuantityValueAndUnit(height[0]);
+          p.height = getQuantityValueAndUnit(height[0]);
 
-          // if (typeof systolicbp != 'undefined')  {
-          //   p.systolicbp = systolicbp;
-          // }
+          if (typeof systolicbp != 'undefined')  {
+            p.systolicbp = systolicbp;
+          }
 
-          // if (typeof diastolicbp != 'undefined') {
-          //   p.diastolicbp = diastolicbp;
-          // }
+          if (typeof diastolicbp != 'undefined') {
+            p.diastolicbp = diastolicbp;
+          }
 
-          // p.hdl = getQuantityValueAndUnit(hdl[0]);
-          // p.ldl = getQuantityValueAndUnit(ldl[0]);
+          p.hdl = getQuantityValueAndUnit(hdl[0]);
+          p.ldl = getQuantityValueAndUnit(ldl[0]);
           console.log('p:');
           console.log(p);
           ret.resolve(p);
@@ -109,11 +109,11 @@
       lymph: {value: ''}
 
       // Cerner SoF Tutorial Observations
-      // height: {value: ''},
-      // systolicbp: {value: ''},
-      // diastolicbp: {value: ''},
-      // ldl: {value: ''},
-      // hdl: {value: ''},
+      height: {value: ''},
+      systolicbp: {value: ''},
+      diastolicbp: {value: ''},
+      ldl: {value: ''},
+      hdl: {value: ''},
     };
   }
 
@@ -158,11 +158,11 @@
     
     // Cerner SoF Tutorial Observations
 
-    // $('#height').html(p.height);
-    // $('#systolicbp').html(p.systolicbp);
-    // $('#diastolicbp').html(p.diastolicbp);
-    // $('#ldl').html(p.ldl);
-    // $('#hdl').html(p.hdl);
+    $('#height').html(p.height);
+    $('#systolicbp').html(p.systolicbp);
+    $('#diastolicbp').html(p.diastolicbp);
+    $('#ldl').html(p.ldl);
+    $('#hdl').html(p.hdl);
   };
 
 })(window);
