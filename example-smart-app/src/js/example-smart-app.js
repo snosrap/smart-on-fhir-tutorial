@@ -106,7 +106,7 @@
       lname: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
-      lymph: {value: ''}
+      lymph: {value: ''},
 
       // Cerner SoF Tutorial Observations
       height: {value: ''},
